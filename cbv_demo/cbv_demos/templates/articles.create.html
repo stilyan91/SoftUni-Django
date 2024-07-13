@@ -1,0 +1,6 @@
+<form action="{% url 'article_create_cbv' %}"
+      method="post">
+    {{ form }}
+    <button>Create</button>
+    {% csrf_token %}
+</form>
