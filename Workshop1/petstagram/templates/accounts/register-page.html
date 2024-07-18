@@ -7,15 +7,12 @@
             <h1>Petstagram</h1>
 
             <!-- Start Register Form -->
-            <form action="">
-                <input type="text" placeholder="Username">
-
-                <input type="email" placeholder="Email">
-
-                <input type="password" placeholder="Password">
-
-                <input type="password" placeholder="Repeat Password">
-
+            <form action="{% url 'register' %}" method="post">
+            {{ email.label_tag}}
+            {{ form.email }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+                {% csrf_token %}
                 <!-- Register Button -->
                 <button type="submit">Register</button>
             </form>
